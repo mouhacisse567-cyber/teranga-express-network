@@ -13,3 +13,4 @@
 Liens entre sites : 172.16.0.0/30 (Siège-Thiès), 172.16.0.4/30 (Siège-Saint-Louis), 172.16.0.8/30 (Thiès-Saint-Louis)
 
 Serveur du siège : 10.10.30.10
+| Siège | Lien SW-CORE vers R-HQ | 10.10.255.0/30 | SW-CORE : 10.10.255.1, R-HQ : 10.10.255.2 |
