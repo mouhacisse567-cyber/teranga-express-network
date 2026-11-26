@@ -1,7 +1,7 @@
 Router#show running-config
 Building configuration...
 
-Current configuration : 1207 bytes
+Current configuration : 1569 bytes
 !
 version 15.1
 no service timestamps log datetime msec
@@ -81,6 +81,18 @@ interface GigabitEthernet0/2
 interface Vlan1
  no ip address
  shutdown
+!
+router ospf 1
+ router-id 3.3.3.3
+ log-adjacency-changes
+ passive-interface GigabitEthernet0/0.10
+ passive-interface GigabitEthernet0/0.40
+ passive-interface GigabitEthernet0/0.99
+ network 172.16.0.4 0.0.0.3 area 0
+ network 172.16.0.8 0.0.0.3 area 0
+ network 10.30.10.0 0.0.0.255 area 0
+ network 10.30.40.0 0.0.0.255 area 0
+ network 10.30.99.0 0.0.0.255 area 0
 !
 ip classless
 !

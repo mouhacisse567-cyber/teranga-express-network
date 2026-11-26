@@ -1,7 +1,7 @@
 R-HQ#show running-config
 Building configuration...
 
-Current configuration : 849 bytes
+Current configuration : 1013 bytes
 !
 version 15.1
 no service timestamps log datetime msec
@@ -66,6 +66,13 @@ interface GigabitEthernet0/2
 interface Vlan1
  no ip address
  shutdown
+!
+router ospf 1
+ router-id 1.1.1.1
+ log-adjacency-changes
+ network 10.10.255.0 0.0.0.3 area 0
+ network 172.16.0.0 0.0.0.3 area 0
+ network 172.16.0.4 0.0.0.3 area 0
 !
 ip classless
 !
